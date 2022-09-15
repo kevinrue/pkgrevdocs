@@ -10,17 +10,20 @@
 <meta name="author" content="Johannes Rainer">
 <meta name="author" content="Lori Shepherd">
 <meta name="description" content="The Bioconductor project is maintained in a Git source control system. Package maintainers update their packages by pushing changes to their git repositories. This chapter contains several...">
-<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta name="generator" content="bookdown 0.29 with bs4_book()">
 <meta property="og:title" content="Chapter 21 Git Version Control | Bioconductor Packages: Development, Maintenance, and Peer Review">
 <meta property="og:type" content="book">
 <meta property="og:description" content="The Bioconductor project is maintained in a Git source control system. Package maintainers update their packages by pushing changes to their git repositories. This chapter contains several...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 21 Git Version Control | Bioconductor Packages: Development, Maintenance, and Peer Review">
 <meta name="twitter:description" content="The Bioconductor project is maintained in a Git source control system. Package maintainers update their packages by pushing changes to their git repositories. This chapter contains several...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
 </head>
 <body data-spy="scroll" data-target="#toc">
 
@@ -73,19 +76,21 @@
 <li><a class="" href="versionnum.html"><span class="header-section-number">22</span> Version Numbering</a></li>
 <li><a class="" href="troubleshooting-build-report.html"><span class="header-section-number">23</span> Troubleshooting Build Report</a></li>
 <li><a class="" href="debugging-cc-code.html"><span class="header-section-number">24</span> Debugging C/C++ code</a></li>
-<li><a class="" href="package-end-of-life-policy.html"><span class="header-section-number">25</span> Package End of Life Policy</a></li>
+<li><a class="" href="deprecation.html"><span class="header-section-number">25</span> Deprecation Guidelines</a></li>
+<li><a class="" href="package-end-of-life-policy.html"><span class="header-section-number">26</span> Package End of Life Policy</a></li>
 <li class="book-part">Package Reviewer Resources</li>
 <li><a class="" href="reviewer-resources-overview.html">Overview</a></li>
-<li><a class="" href="review-expectation.html"><span class="header-section-number">26</span> Review Expectations</a></li>
-<li><a class="" href="reviewtools.html"><span class="header-section-number">27</span> Reviewer Resources and Tools</a></li>
-<li><a class="" href="review-volunteer-chapter.html"><span class="header-section-number">28</span> Volunteer to Review</a></li>
+<li><a class="" href="review-expectation.html"><span class="header-section-number">27</span> Review Expectations</a></li>
+<li><a class="" href="reviewtools.html"><span class="header-section-number">28</span> Reviewer Resources and Tools</a></li>
+<li><a class="" href="review-volunteer-chapter.html"><span class="header-section-number">29</span> Volunteer to Review</a></li>
 <li class="book-part">Appendix</li>
 <li><a class="" href="use-devel.html"><span class="header-section-number">A</span> Using the ‘Devel’ Version of Bioconductor</a></li>
 <li><a class="" href="long-tests.html"><span class="header-section-number">B</span> Long Tests</a></li>
 <li><a class="" href="querying-web-resources.html"><span class="header-section-number">C</span> Querying Web Resources</a></li>
 <li><a class="" href="c-fortran.html"><span class="header-section-number">D</span> C and Fortran code</a></li>
 <li><a class="" href="cmavericks-best-practices.html"><span class="header-section-number">E</span> C++/Mavericks Best Practices</a></li>
-<li><a class="" href="booknews.html"><span class="header-section-number">F</span> NEWS</a></li>
+<li><a class="" href="man-links.html"><span class="header-section-number">F</span> Debug: Links in Rd files</a></li>
+<li><a class="" href="booknews.html"><span class="header-section-number">G</span> NEWS</a></li>
 </ul>
 
         <div class="book-extra">
@@ -171,7 +176,7 @@ annotation files. To update an existing Annotation package please send an email
 to <a href="mailto:maintainer@bioconductor.org" class="email">maintainer@bioconductor.org</a>. A member of the Bioconductor team will be in
 contact to receive the updated package.</p>
 <p>Newer annotation packages can be stored in GIT as it is a requirement to use the
-<em><a href="https://bioconductor.org/packages/3.15/AnnotationHub">AnnotationHub</a></em> server hosted data. The larger sized
+<em><a href="https://bioconductor.org/packages/3.16/AnnotationHub">AnnotationHub</a></em> server hosted data. The larger sized
 files are not included directly in the package. To contribute a new Annotation
 package please contact <a href="mailto:hubs@bioconductor.org" class="email">hubs@bioconductor.org</a> for guidance and read the
 documentation on <a href="https://bioconductor.org/packages/devel/bioc/vignettes/HubPub/inst/doc/CreateAHubPackage.html">Create A Hub Package</a>.</p>
@@ -333,7 +338,9 @@ keys are on file with <em>Bioconductor</em>.</p></li>
 <p><a href="https://help.github.com/articles/create-a-repo/">Create a new GitHub repo</a> on your account, with the name
 of the existing <em>Bioconductor</em> package.</p>
 <p>We use “BiocGenerics” as an example for this scenario.</p>
-<div class="inline-figure"><img src="images/create_repo.png" width="398"></div>
+<div class="inline-figure">
+<img src="images/create_repo.png"><!-- -->
+</div>
 <p>After pressing the ‘Create repository’ button, <strong>ignore</strong> the
 instructions that GitHub provides, and follow the rest of this
 document.</p>
@@ -467,39 +474,14 @@ available to the user community.</p>
  git push upstream master</code></pre>
 </li>
 </ol>
+<p>Make sure there is a valid version bump for the changes to propagate to users.</p>
 </div>
 <div id="optional-merge-changes-to-the-current-release-branch" class="section level4" number="21.5.3.4">
 <h4>
 <span class="header-section-number">21.5.3.4</span> (Optional) Merge changes to the current release branch<a class="anchor" aria-label="anchor" href="#optional-merge-changes-to-the-current-release-branch"><i class="fas fa-link"></i></a>
 </h4>
-<ol style="list-style-type: decimal">
-<li>
-<p>If the changes (bug fixes) need to be available on the
-<code>&lt;RELEASE_X_Y&gt;</code> branch. Checkout the branch <code>&lt;RELEASE_X_Y&gt;</code> using:</p>
-<pre><code> git checkout -b &lt;RELEASE_X_Y&gt; upstream/&lt;RELEASE_X_Y&gt;</code></pre>
-</li>
-<li>
-<p>Pull any changes from the <em>Bioconductor</em> repository to this branch</p>
-<pre><code> git pull</code></pre>
-</li>
-<li>
-<p>Then, merge <code>master</code> into the <code>&lt;RELEASE_X_Y&gt;</code> branch</p>
-<pre><code>git merge master</code></pre>
-</li>
-</ol>
-<p>A new commit message will show up after this step, with the
-message <code>Merge branch 'master' into &lt;RELEASE_X_Y&gt;</code>. It will be
-committed to <code>&lt;RELEASE_X_Y&gt;</code> branch when you save. Update the
-<a href="versionnum.html#versionnum">version number</a> so that it is correct for the release, and commit
-the modified DESCRIPTION file</p>
-<pre><code>git add DESCRIPTION
-git commit -m "Update version bump"</code></pre>
-<ol style="list-style-type: decimal">
-<li>
-<p>Push changes to the <code>&lt;RELEASE_X_Y&gt;</code> branch using:</p>
-<pre><code> git push upstream &lt;RELEASE_X_Y&gt;</code></pre>
-</li>
-</ol>
+<p>Merging master into release branch should be avoided. Select bug fixes should be
+cherry-picked from master to release. See section <a href="git-version-control.html#bug-fix-in-release-and-devel">Bug Fixes in Release and Devel</a></p>
 </div>
 </div>
 </div>
@@ -931,7 +913,9 @@ commit.</p>
 fix”.</p>
 <pre><code> git commit -m "bug fix: my bug fix"</code></pre>
 <p>Bump the version of the package by editing the <code>Version</code> field in the
-<code>DESCRIPTION</code> and commit the change.</p>
+<code>DESCRIPTION</code> and commit the change <strong>in a separate commit</strong>. This allows to
+only <code>cherry-pick</code> the bug correction and avoid version number conflicts with
+the Bioconductor branches when/if the bug fixes are ported to release.</p>
 <pre><code> ## after version bump
  git add DESCRIPTION
  git commit -m "version bump in devel"</code></pre>
@@ -1289,7 +1273,9 @@ these two remotes to be in sync.</p>
 achieve this.</p>
 <p>Image explaining GitHub and <em>Bioconductor</em> relationship for a
 developer</p>
-<div class="inline-figure"><img src="images/github-bioc-relationship.png" width="534"></div>
+<div class="inline-figure">
+<img src="images/github-bioc-relationship.png"><!-- -->
+</div>
 </li>
 <li>
 <p>Can I have more than one upstream remote, if yes, is this recommended?</p>
@@ -1518,7 +1504,7 @@ please send an email to <a href="mailto:bioc-devel@bioconductor.org" class="emai
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Bioconductor Packages: Development, Maintenance, and Peer Review</strong>" was written by Kevin Rue-Albrecht, Daniela Cassol, Johannes Rainer, Lori Shepherd. It was last built on 2022-02-25.</p>
+    <p>"<strong>Bioconductor Packages: Development, Maintenance, and Peer Review</strong>" was written by Kevin Rue-Albrecht, Daniela Cassol, Johannes Rainer, Lori Shepherd. It was last built on 2022-09-15.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
@@ -1531,7 +1517,7 @@ please send an email to <a href="mailto:bioc-devel@bioconductor.org" class="emai
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -4,19 +4,19 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>B Long Tests | Bioconductor Packages: Development, Maintenance, and Peer Review</title>
+<title>F Debug: Links in Rd files | Bioconductor Packages: Development, Maintenance, and Peer Review</title>
 <meta name="author" content="Kevin Rue-Albrecht">
 <meta name="author" content="Daniela Cassol">
 <meta name="author" content="Johannes Rainer">
 <meta name="author" content="Lori Shepherd">
-<meta name="description" content="B.1 What are they Code in the tests subdirectory of all Bioconductor software packages is run by R CMD check on a daily basis as part of the Bioconductor nightly builds. The maximum amount of time...">
+<meta name="description" content="F.1 Context This chapter describes an issue resolved on 31-May-2022. The objective was to include a link from the man page of one package to the man page of the SummarizedExperiment class in the...">
 <meta name="generator" content="bookdown 0.29 with bs4_book()">
-<meta property="og:title" content="B Long Tests | Bioconductor Packages: Development, Maintenance, and Peer Review">
+<meta property="og:title" content="F Debug: Links in Rd files | Bioconductor Packages: Development, Maintenance, and Peer Review">
 <meta property="og:type" content="book">
-<meta property="og:description" content="B.1 What are they Code in the tests subdirectory of all Bioconductor software packages is run by R CMD check on a daily basis as part of the Bioconductor nightly builds. The maximum amount of time...">
+<meta property="og:description" content="F.1 Context This chapter describes an issue resolved on 31-May-2022. The objective was to include a link from the man page of one package to the man page of the SummarizedExperiment class in the...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="B Long Tests | Bioconductor Packages: Development, Maintenance, and Peer Review">
-<meta name="twitter:description" content="B.1 What are they Code in the tests subdirectory of all Bioconductor software packages is run by R CMD check on a daily basis as part of the Bioconductor nightly builds. The maximum amount of time...">
+<meta name="twitter:title" content="F Debug: Links in Rd files | Bioconductor Packages: Development, Maintenance, and Peer Review">
+<meta name="twitter:description" content="F.1 Context This chapter describes an issue resolved on 31-May-2022. The objective was to include a link from the man page of one package to the man page of the SummarizedExperiment class in the...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.4.0/transition.js"></script><script src="libs/bs3compat-0.4.0/tabs.js"></script><script src="libs/bs3compat-0.4.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
@@ -85,11 +85,11 @@
 <li><a class="" href="review-volunteer-chapter.html"><span class="header-section-number">29</span> Volunteer to Review</a></li>
 <li class="book-part">Appendix</li>
 <li><a class="" href="use-devel.html"><span class="header-section-number">A</span> Using the ‘Devel’ Version of Bioconductor</a></li>
-<li><a class="active" href="long-tests.html"><span class="header-section-number">B</span> Long Tests</a></li>
+<li><a class="" href="long-tests.html"><span class="header-section-number">B</span> Long Tests</a></li>
 <li><a class="" href="querying-web-resources.html"><span class="header-section-number">C</span> Querying Web Resources</a></li>
 <li><a class="" href="c-fortran.html"><span class="header-section-number">D</span> C and Fortran code</a></li>
 <li><a class="" href="cmavericks-best-practices.html"><span class="header-section-number">E</span> C++/Mavericks Best Practices</a></li>
-<li><a class="" href="man-links.html"><span class="header-section-number">F</span> Debug: Links in Rd files</a></li>
+<li><a class="active" href="man-links.html"><span class="header-section-number">F</span> Debug: Links in Rd files</a></li>
 <li><a class="" href="booknews.html"><span class="header-section-number">G</span> NEWS</a></li>
 </ul>
 
@@ -98,91 +98,83 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="long-tests" class="section level1" number="31">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="man-links" class="section level1" number="35">
 <h1>
-<span class="header-section-number">B</span> Long Tests<a class="anchor" aria-label="anchor" href="#long-tests"><i class="fas fa-link"></i></a>
+<span class="header-section-number">F</span> Debug: Links in Rd files<a class="anchor" aria-label="anchor" href="#man-links"><i class="fas fa-link"></i></a>
 </h1>
-<div id="what-are-they" class="section level2" number="31.1">
+<div id="context" class="section level2" number="35.1">
 <h2>
-<span class="header-section-number">B.1</span> What are they<a class="anchor" aria-label="anchor" href="#what-are-they"><i class="fas fa-link"></i></a>
+<span class="header-section-number">F.1</span> Context<a class="anchor" aria-label="anchor" href="#context"><i class="fas fa-link"></i></a>
 </h2>
-<p>Code in the <code>tests</code> subdirectory of all Bioconductor software
-packages is run by <code>R CMD check</code> on a daily basis as part of
-the <a href="https://bioconductor.org/checkResults/devel/bioc-LATEST/">Bioconductor nightly builds</a>.
-The maximum amount of time that <code>R CMD check</code> is allowed to spend
-on each package is 40 min.</p>
-<p>Package developers who wish to implement <code>tests</code> that will be too long
-to run in the context of the nightly builds can set up “long tests” in
-their package and add the package to the Bioconductor <em>Long Tests builds</em>.</p>
+<p>This chapter describes an issue resolved on 31-May-2022.</p>
+<p>The objective was to include a link from the man page of one package
+to the man page of the <code>SummarizedExperiment</code> class in the <em><a href="https://bioconductor.org/packages/3.16/SummarizedExperiment">SummarizedExperiment</a></em> package.</p>
+<p>Using <em><a href="https://CRAN.R-project.org/package=roxygen2">roxygen2</a></em>, the link was written as
+follows in the R file:</p>
+<pre><code>#' ... \linkS4class{SummarizedExperiment} ...</code></pre>
+<p>The issue was that <code><a href="http://r-lib.github.io/rcmdcheck/reference/rcmdcheck.html">rcmdcheck::rcmdcheck()</a></code> reported the following WARNING:</p>
+<pre><code>W  checking Rd cross-references (&lt;...&gt;ms)
+   Missing link or links in documentation object '&lt;...&gt;.Rd':
+     ‘SummarizedExperiment-class’
+   
+   See section 'Cross-references' in the 'Writing R Extensions' manual.</code></pre>
 </div>
-<div id="setup" class="section level2" number="31.2">
+<div id="what-worked" class="section level2" number="35.2">
 <h2>
-<span class="header-section-number">B.2</span> Setup<a class="anchor" aria-label="anchor" href="#setup"><i class="fas fa-link"></i></a>
+<span class="header-section-number">F.2</span> What worked<a class="anchor" aria-label="anchor" href="#what-worked"><i class="fas fa-link"></i></a>
 </h2>
-<p>4 steps:</p>
+<p>First, the <code>SummarizedExperiment</code> package was added to the <code>Depends:</code> section
+of the DESCRIPTION file.</p>
+<pre><code>Depends:
+    SummarizedExperiment</code></pre>
+<p>At that point, <code><a href="http://r-lib.github.io/rcmdcheck/reference/rcmdcheck.html">rcmdcheck::rcmdcheck()</a></code> dropped the previous WARNING and instead
+displayed the following NOTE.</p>
+<pre><code>N  checking dependencies in R code (7.9s)
+   Package in Depends field not imported from: ‘SummarizedExperiment’
+     These packages need to be imported from (in the NAMESPACE file)
+     for when this namespace is loaded but not attached.</code></pre>
+<p>Then, the following line was added to the R script.</p>
+<pre><code>#' @import SummarizedExperiment</code></pre>
+<p>Next, <code><a href="https://devtools.r-lib.org/reference/document.html">devtools::document()</a></code> was run, adding the following line to the
+NAMESPACE file.</p>
+<pre><code>import(SummarizedExperiment)</code></pre>
+<p>At which point <code><a href="http://r-lib.github.io/rcmdcheck/reference/rcmdcheck.html">rcmdcheck::rcmdcheck()</a></code> did not return any more issue.</p>
+</div>
+<div id="what-did-not-work" class="section level2" number="35.3">
+<h2>
+<span class="header-section-number">F.3</span> What did not work<a class="anchor" aria-label="anchor" href="#what-did-not-work"><i class="fas fa-link"></i></a>
+</h2>
+<p>Adding the <code>SummarizedExperiment</code> package to the <code>Imports:</code> section of the
+DESCRIPTION file, adding an <code>@import</code> statement in the documentation, and
+running <code><a href="https://devtools.r-lib.org/reference/document.html">devtools::document()</a></code>.
+At that point, <code><a href="http://r-lib.github.io/rcmdcheck/reference/rcmdcheck.html">rcmdcheck::rcmdcheck()</a></code> continued to display the initial WARNING.</p>
+</div>
+<div id="additional-resources-1" class="section level2" number="35.4">
+<h2>
+<span class="header-section-number">F.4</span> Additional resources<a class="anchor" aria-label="anchor" href="#additional-resources-1"><i class="fas fa-link"></i></a>
+</h2>
 <ul>
-<li><p>Put the code for the “long tests” in the <code>longtests</code> subdirectory of
-your package. Like for the code in the <code>tests</code> directory, this code
-will typically (but not necessarily) run <a href="tests.html#tests">unit tests</a>.</p></li>
-<li>
-<p>Add your package to the <em>Long Tests builds</em> by adding a <code>.BBSoptions</code>
-file to its top-level directory with the following line in it:</p>
-<pre><code>RunLongTests: TRUE</code></pre>
-</li>
-<li><p>The code in the <code>longtests</code> subdirectory will be run <strong>once a week</strong>
-(every Saturday) as part of the <em>Long Tests builds</em> and will be allowed
-to run for a <strong>maximum of 6 hours</strong> before a TIMEOUT is raised.</p></li>
-<li><p>Check the
-<a href="https://bioconductor.org/checkResults/devel/bioc-longtests-LATEST/">latest <em>Long Tests</em> report</a> for BioC devel.
-The next time the report is updated (normally every Saturday), your
-package should be included in it.</p></li>
+<li><a href="https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html">Rd formatting</a></li>
 </ul>
-<p>Note that we also run the <em>Long Tests builds</em> for the current release
-branch once a week (every Saturday). The latest report for these builds
-is <a href="https://bioconductor.org/checkResults/release/bioc-longtests-LATEST/">here</a>.</p>
-</div>
-<div id="short-tests-vs-long-tests" class="section level2" number="31.3">
-<h2>
-<span class="header-section-number">B.3</span> “Short tests” vs “long tests”<a class="anchor" aria-label="anchor" href="#short-tests-vs-long-tests"><i class="fas fa-link"></i></a>
-</h2>
-<p>The <em>Long Tests</em> setup forces developers to split the testing code
-in their package between “short tests” and “long tests”. The former go in
-the <code>tests</code> subdirectory and must be able to run in less than 40 min (this
-limit is actually for the full <code>R CMD check</code> command which runs other
-possibly time-consuming things in addition to the code in <code>tests</code>).
-The latter go in the <code>longtests</code> subdirectory and must be able to run
-in less than 6 hours.</p>
-<p>Note that, unlike with “short tests” failures, “long tests” failures don’t
-prevent a package from propagating after a version bump. In other words,
-even if a package is included in the <em>Long Tests builds</em>, propagation
-is still determined by the results of the nightly builds.</p>
-</div>
-<div id="need-help" class="section level2" number="31.4">
-<h2>
-<span class="header-section-number">B.4</span> Need help?<a class="anchor" aria-label="anchor" href="#need-help"><i class="fas fa-link"></i></a>
-</h2>
-<p>Ask on the <a href="https://stat.ethz.ch/mailman/listinfo/bioc-devel">bioc-devel</a> mailing list if you have questions or
-need help with the <em>Long Tests builds</em>.</p>
-
 </div>
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="use-devel.html"><span class="header-section-number">A</span> Using the ‘Devel’ Version of Bioconductor</a></div>
-<div class="next"><a href="querying-web-resources.html"><span class="header-section-number">C</span> Querying Web Resources</a></div>
+<div class="prev"><a href="cmavericks-best-practices.html"><span class="header-section-number">E</span> C++/Mavericks Best Practices</a></div>
+<div class="next"><a href="booknews.html"><span class="header-section-number">G</span> NEWS</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#long-tests"><span class="header-section-number">B</span> Long Tests</a></li>
-<li><a class="nav-link" href="#what-are-they"><span class="header-section-number">B.1</span> What are they</a></li>
-<li><a class="nav-link" href="#setup"><span class="header-section-number">B.2</span> Setup</a></li>
-<li><a class="nav-link" href="#short-tests-vs-long-tests"><span class="header-section-number">B.3</span> “Short tests” vs “long tests”</a></li>
-<li><a class="nav-link" href="#need-help"><span class="header-section-number">B.4</span> Need help?</a></li>
+<li><a class="nav-link" href="#man-links"><span class="header-section-number">F</span> Debug: Links in Rd files</a></li>
+<li><a class="nav-link" href="#context"><span class="header-section-number">F.1</span> Context</a></li>
+<li><a class="nav-link" href="#what-worked"><span class="header-section-number">F.2</span> What worked</a></li>
+<li><a class="nav-link" href="#what-did-not-work"><span class="header-section-number">F.3</span> What did not work</a></li>
+<li><a class="nav-link" href="#additional-resources-1"><span class="header-section-number">F.4</span> Additional resources</a></li>
 </ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/Bioconductor/pkgrevdocs/blob/master/long-tests.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/Bioconductor/pkgrevdocs/edit/master/long-tests.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/Bioconductor/pkgrevdocs/blob/master/debug-rd-links.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/Bioconductor/pkgrevdocs/edit/master/debug-rd-links.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
